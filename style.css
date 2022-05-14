@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(219, 219, 219);
+}
+nav{
+background-color: rgb(255, 223, 13);
+}
+nav ul a.active{
+    border-bottom: solid 2px white;
+    background-color: transparent;
+}
+.nav-header h1{
+    text-shadow: 2px 2px 8px black;
+}
