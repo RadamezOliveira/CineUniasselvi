@@ -1,5 +1,4 @@
 <?php
-
 $rota = $_SERVER["REQUEST_URI"];
 $metodo = $_SERVER["REQUEST_METHOD"];
 
