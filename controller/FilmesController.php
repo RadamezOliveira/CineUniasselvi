@@ -19,6 +19,6 @@ class FilmesController{
         if($filmesRepository->salvar($filme)) {
             $_SESSION["msg"] = "Filme cadastrado com sucesso";
         };
-        header("Location: galeria.php");
+        header("Location: /");
     }
 }

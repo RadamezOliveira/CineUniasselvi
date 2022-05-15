@@ -6,8 +6,8 @@ include "cabecalho.php";
     <nav class="nav-extended">
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="right">
-                <li><a href="galeria.php">Galeria</a></li>
-                <li><a href="cadastrar.php" class="active">Cadastrar</a></li>
+                <li><a href="/">Galeria</a></li>
+                <li><a href="/novo" class="active">Cadastrar</a></li>
             </ul>
         </div>
         <div class="nav-header center">
