@@ -1,12 +1,10 @@
 <?php
 include "cabecalho.php";
-require "./repository/FilmesRepositoryPDO.php";
+//session_start();
 require "./util/mensagem.php";
 
-session_start();
-
-$filmesRepository = new FilmesRepositorioPDO();
-$filmes = $filmesRepository->listarTodos();
+$controller = new FilmesController();
+$filmes = $controller->index();
 ?>
 
 <body>
