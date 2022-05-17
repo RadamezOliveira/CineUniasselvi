@@ -1,7 +1,13 @@
 <?php
 $bd = new SQLite3("filmes.db");
 
-$sql = "DROP TABLE IF EXISTS filmes";
+$sql = "ALTER TABLE filmes ADD COLUMN (favorito INT DEFAULT 0)";
+
+if($bd->exec($sql)){
+    echo "\nTabela filmes alterado com sucesso\n";
+} else {
+    echo "\nErro ao alterar tabela filmes\n";
+}
 
 $sql = "CREATE TABLE filmes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

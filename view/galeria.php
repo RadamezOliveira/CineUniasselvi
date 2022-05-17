@@ -33,7 +33,9 @@ $filmes = $controller->index();
                     <div class="card hoverable">
                         <div class="card-image">
                             <img src="<?= $filme->poster ?>">
-                            <a class="btn-floating halfway-fab waves-effect teal accent-4"><i class="material-icons">favorite</i></a>
+                            <button class="btn-fav btn-floating halfway-fab waves-effect teal accent-4" data-id="<?=$filme->id?>">
+                                <i class="material-icons"><?=($filme->favorito)?"favorite":"favorite_border"?></i>
+                            </button>
                         </div>
                         <div class="card-content">
                             <span class="card-title"><?= $filme->titulo ?></span>
@@ -47,7 +49,30 @@ $filmes = $controller->index();
             ?>
         </div>
     </div>
-    <?=Mensagem::mostrar();?>
+    <?= Mensagem::mostrar(); ?>
+
+    <script>
+        document.querySelectorAll(".btn-fav").forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                const id = btn.getAttribute("data-id")
+                console.log(id);
+                fetch(`/favoritar/${id}`)
+                .then(response => response.json())
+                .then(response => {
+                    if(response.success === "ok") {
+                        if(btn.querySelector("i").innerHTML === "favorite") {
+                            btn.querySelector("i").innerHTML = "favorite_border"
+                        } else {
+                            btn.querySelector("i").innerHTML = "favorite"
+                        }
+                    }
+                })
+                .catch( error => {
+                    M.toast({html: 'Erro ao favoritar'})
+                })
+            })
+        })
+    </script>
 
 </body>
 
