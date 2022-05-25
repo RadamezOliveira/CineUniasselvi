@@ -10,13 +10,13 @@ if($bd->exec($sql)){
 }
 
 $sql = "CREATE TABLE filmes (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR (200) NOT NULL,
     poster VARCHAR (200),
     sinopse TEXT,
-    nota DECIMAL (2,1)
-    )
-";
+    nota DECIMAL (2,1),
+    favorito INT DEFAULT 0
+    )";
 
 if($bd->exec($sql)){
     echo "\ntabela criada\n";
