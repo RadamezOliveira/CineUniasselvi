@@ -9,7 +9,7 @@ if($rota === "/"){
     exit();
 }
 if($rota === "/cadastrar"){
-    if($metodo == "GET") require "view/cadastrar.php";
+    if($metodo == "GET") require "./view/cadastrar.php";
     if($metodo == "POST") {
         $controller = new FilmesController();
         $controller->save($_REQUEST);
