@@ -7,7 +7,7 @@ include "cabecalho.php";
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="right">
                 <li><a href="/">Galeria</a></li>
-                <li><a href="/novo" class="active">Cadastrar</a></li>
+                <li><a href="/cadastrar" class="active">Cadastrar</a></li>
             </ul>
         </div>
         <div class="nav-header center">

@@ -8,7 +8,7 @@ if($rota === "/"){
     require "view/galeria.php";
     exit();
 }
-if($rota === "/novo"){
+if($rota === "/cadastrar"){
     if($metodo == "GET") require "view/cadastrar.php";
     if($metodo == "POST") {
         $controller = new FilmesController();

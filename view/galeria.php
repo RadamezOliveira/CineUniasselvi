@@ -12,7 +12,7 @@ $filmes = $controller->index();
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="right">
                 <li><a href="/" class="active">Galeria</a></li>
-                <li><a href="/novo">Cadastrar</a></li>
+                <li><a href="/cadastrar">Cadastrar</a></li>
             </ul>
         </div>
         <div class="nav-header center">
