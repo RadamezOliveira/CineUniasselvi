@@ -46,7 +46,6 @@ class FilmesController{
     {
         $filmesRepository = new FilmesRepositorioPDO();
         $result = ['success'=> $filmesRepository->favoritar($id)];
-        //$result = ['sucess'=> "ok"];
         header("Content-type: application/json");
         echo json_encode($result);
     }
@@ -54,7 +53,6 @@ class FilmesController{
     {
         $filmesRepository = new FilmesRepositorioPDO();
         $result = ['success'=> $filmesRepository->delete($id)];
-        //$result = ['sucess'=> "ok"];
         header("Content-type: application/json");
         echo json_encode($result);
     }
