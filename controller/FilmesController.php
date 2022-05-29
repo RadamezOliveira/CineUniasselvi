@@ -50,4 +50,12 @@ class FilmesController{
         header("Content-type: application/json");
         echo json_encode($result);
     }
+    public function delete(int $id)
+    {
+        $filmesRepository = new FilmesRepositorioPDO();
+        $result = ['success'=> $filmesRepository->delete($id)];
+        //$result = ['sucess'=> "ok"];
+        header("Content-type: application/json");
+        echo json_encode($result);
+    }
 }
